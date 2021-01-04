@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2>Marks Sheet</h2>
+    <!-- <p>Total marks : 300</p> -->
+    <p id="demo"></p>
+    <script>
+        var f = parseInt(prompt('Marks obatiend in first subjects'))
+        var s = parseInt(prompt('Marks obatiend in Second subjects'))
+        var t = parseInt(prompt('Marks obatiend in Third subjects'))
+        var sum = f + s + t
+        alert(sum)
+
+        total_marks = 300 
+        // var percentToGet = sum
+        var avg = (sum / total_marks * 100)
+        
+        if (avg >= 80) {
+            document.getElementById('demo').innerHTML = 'Total marks : 300' + '<br>' + 'Marks obtained :' + sum + '<br>' + 'Percentage :' + avg + '%'  + '<br>' + 'Grade :' + 'A-one' + '<br>' + 'Remarks :' + 'Excellent'
+        }
+        else
+            if (avg >= 70) {
+                document.getElementById('demo').innerHTML = 'Total marks : 300' + '<br>' + 'Marks obtained :' + sum + '<br>' + 'Percentage :' + avg + '%' + '<br>' + 'Grade :' + 'A' + '<br>' + 'Remarks :' + 'Good'
+            }
+            else
+                if (avg >= 60) {
+                    document.getElementById('demo').innerHTML = 'Total marks : 300' + '<br>' + 'Marks obtained :' + sum + '<br>' + 'Percentage :' + avg + '%' +  '<br>' + 'Grade :' + 'B' + '<br>' + 'Remarks :' + 'You need to improve'
+                }
+                else
+                    if (avg < 60) {
+                        document.getElementById('demo').innerHTML = 'Total marks : 300' + '<br>' + 'Marks obtained :' + sum + '<br>' + 'Percentage :' + avg + '%' +  '<br>' + 'Grade :' + 'Fail' + '<br>' + 'Remarks :' + 'Sorry'
+                    }
+    </script>
+</body>
+
+</html>
